@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Title</title>
+	<meta name="description" content="description"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="green darken-4 yellow-text">Duck Dashboard</h1>
+	<h5 class="col s12">Edit <%= duck.name %></h5>
+	<div class="row">
+		<form class="col s4" action="/ducks/<%= duck._id %>" method="post">
+			<div class="input-field col s12">
+				<input type="text" name="name" id="name" value="<%= duck.name %>">
+				<label for="name">Name</label>
+			</div>
+			<div class="input-field col s12">
+				<input type="text" name="color" id="color" value="<%= duck.color %>">
+				<label for="color">Color</label>
+			</div>
+			<div class="input-field col s6">
+				<button class="btn blue waves-effect waves-light">Edit</button>
+			</div>
+			<div class="input-field col s6 right-align">
+				<a href="/ducks/<%= duck._id %>/destroy" class="btn blue waves-effect waves-light">Delete</a>
+			</div>
+		</form>
+	</div>
+</div>
+	<script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
+	<script language="javascript" src="/assets/js/materialize.min.js"></script>
+</body>
+</html>

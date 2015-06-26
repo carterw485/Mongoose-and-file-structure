@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Title</title>
+	<meta name="description" content="description"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="green darken-4 yellow-text">Duck Dashboard</h1>
+	<h5 class="col s12">Create a duck</h5>
+	<form class="row"action="/ducks" method="post">
+		<div class="input-field col s12">
+			<input type="text" name="name" id="name">
+			<label for="name">Name</label>
+		</div>
+		<div class="input-field col s12">
+			<input type="text" name="color" id="color">
+			<label for="color">Color</label>
+		</div>
+		<div class="input-field col s12">
+			<button class="btn green darken-4">Create!</button>
+		</div>
+	</form>
+	
+</div>
+	<script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
+	<script language="javascript" src="/assets/js/materialize.min.js"></script>
+</body>
+</html>

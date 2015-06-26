@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Title</title>
+	<meta name="description" content="description"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="green darken-4 yellow-text">Duck Dashboard</h1>
+	<h5 class="col s12">These are some ducks</h5>
+	<% for(i in ducks){ %>
+	<a href="/ducks/<%= ducks[i]._id %>">
+		<div class="row grey lighten-4 black-text">
+			<div class="col s1">
+				<p>Name:</p>
+				<p>Color:</p>
+			</div>
+			<div class="col s1">
+				<p><%= ducks[i].name %></p>
+				<p><%= ducks[i].color %></p>
+			</div>
+		</div>
+	</a>
+	<% } %>
+	<div class="row">
+		<div class="col s12">
+			<a href="/ducks/new"><button class="btn green darken-4">Create Duck</button></a>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
+	<script language="javascript" src="/assets/js/materialize.min.js"></script>
+</body>
+</html>
